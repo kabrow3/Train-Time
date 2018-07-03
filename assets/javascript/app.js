@@ -72,7 +72,7 @@ var config = {
     var trainFirst = childSnapshot.val().first;
     var trainFreq = childSnapshot.val().freq;
     
-    var now = moment().format("X");
+    var now = Number(moment().format("X"));
   
     // Employee Info
     console.log(trainName);
@@ -83,9 +83,9 @@ var config = {
   
    
 
-    var trainFreqMath = moment(trainFreq, "mm").format("X");
+    var trainFreqMath = Number(moment(trainFreq, "mm").format("X"));
 
-    var timeSince = moment().diff(moment(trainFirst, "X"));
+    var timeSince = Number(moment().diff(moment(trainFirst, "X")));
     console.log(timeSince);
 
     var tempAway = timeSince % trainFreqMath;
