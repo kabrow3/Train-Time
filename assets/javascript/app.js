@@ -19,7 +19,7 @@ var config = {
     // Grabs user input
     var trainName = $("#train-name-input").val().trim();
     var trainDest = $("#destination-input").val().trim();
-    var trainFirst = moment($("#train-first-input").val().trim(), "HH:mm").format("X");
+    var trainFirst = moment($("#train-first-input").val().trim(), "HH:mm");
     var trainFreq = $("#frequency-input").val().trim();
   
     // Creates local "temporary" object for holding train data
@@ -50,7 +50,7 @@ var config = {
     $("#frequency-input").val("");
   });
   
-  // Creates Firebase event for adding employee to the database and a row in the html when a user adds an entry
+  // Creates Firebase event for adding train to the database and a row in the html when a user adds an entry
   database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   
     console.log(childSnapshot.val());
