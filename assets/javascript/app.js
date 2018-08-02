@@ -19,7 +19,7 @@ var config = {
     // Grabs user input
     var trainName = $("#train-name-input").val().trim();
     var trainDest = $("#destination-input").val().trim();
-    var trainFirst = moment($("#train-first-input").val().trim(), "HH:mm");
+    var trainFirst = $("#train-first-input").val().trim();
     var trainFreq = $("#frequency-input").val().trim();
   
     // Creates local "temporary" object for holding train data
